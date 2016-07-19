@@ -8,7 +8,7 @@
  * @subpackage 
  */
 
-class Usuario extends ActiveRecord {
+class usuario extends ActiveRecord {
     
      
     

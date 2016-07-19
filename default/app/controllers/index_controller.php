@@ -5,6 +5,8 @@
  *
  */
 Load::models('usuario');
+Load::lib('auth');
+
 class IndexController extends AppController
 {
 
@@ -14,7 +16,7 @@ class IndexController extends AppController
             $pwd = Input::post("password");
             $usuario=Input::post("login");
 
-            $auth = new Auth("usuario", "class: usuario", "login: $usuario", "password: $pwd");
+            $auth = new Auth("model", "class: usuario", "login: $usuario", "password: $pwd");
             if ($auth->authenticate()) {
                 Redirect::to("admin/");
             } else {

@@ -1,0 +1,9 @@
+
+<div><h1>Hola <?php echo Auth::get('login'); ?> <?php echo Html::link('admin/salir', "salir");?></h1></div>
+
+<ol class="breadcrumb">
+  <li><?php echo Html::link('admin/',"Inicio") ?></li>
+  <li><?php echo Html::link('admin/listar',"Listar Tweets") ?></li>
+  <li><?php echo Html::link('admin/agregar',"Agregar Tweet") ?></li>
+  <li><?php echo Html::link('admin/configuracion',"Configuración") ?></li>
+</ol>

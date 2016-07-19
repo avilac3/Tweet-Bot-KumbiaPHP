@@ -1,11 +1,4 @@
-<?php View::content() ?>
-<ol class="breadcrumb">
-  <li><?php echo Html::link('admin/',"Inicio") ?></li>
-  <li><?php echo Html::link('admin/listar',"Listar Tweets") ?></li>
-  <li><?php echo Html::link('admin/agregar',"Agregar Tweet") ?></li>
-  <li><?php echo Html::link('admin/configuracion',"Configuración") ?></li>
-</ol>
-
+<?php View::partial('backend/admin_menu'); ?>
 
 <table class="table table-hover table-condensed table-responsive">
     <thead>
