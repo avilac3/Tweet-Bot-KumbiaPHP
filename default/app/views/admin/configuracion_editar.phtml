@@ -1,0 +1,26 @@
+
+<div><h1>Hola Administrador</h1></div>
+
+<ol class="breadcrumb">
+  <li><?php echo Html::link('admin/',"Inicio") ?></li>
+  <li><?php echo Html::link('admin/listar',"Listar Tweets") ?></li>
+  <li><?php echo Html::link('admin/agregar',"Agregar Tweet") ?></li>
+  <li><?php echo Html::link('admin/configuracion',"Configuración") ?></li>
+</ol>
+
+<?php echo Form::open()?>
+
+    <div class="form-group">
+        <label><h4>Campo</h4></label>
+        <?php echo Form::text('configuracion.campo',array('class'=>'form-control','disabled'=>'disabled')) ?>
+    </div>
+
+    <div class="form-group">
+        <label><h4>Valor</h4></label>
+        <?php echo Form::textarea('configuracion.valor',array('class'=>'form-control','rows'=>'3')) ?>
+    </div>
+
+<?php echo Form::submit('Actualizar', array('class'=>'btn btn-primary btn-lg btn-block')) ?>
+
+<?php echo Form::close()?>
+

@@ -1,0 +1,28 @@
+
+<div><h1>Hola Administrador</h1></div>
+
+<ol class="breadcrumb">
+  <li><?php echo Html::link('admin/',"Inicio") ?></li>
+  <li><?php echo Html::link('admin/listar',"Listar Tweets") ?></li>
+  <li><?php echo Html::link('admin/agregar',"Agregar Tweet") ?></li>
+  <li><?php echo Html::link('admin/configuracion',"Configuración") ?></li>
+</ol>
+
+<table class="table table-hover table-condensed table-responsive">
+    <thead>
+        <tr>
+            <th class="col-hidden">CAMPO</th>
+            <th class="col-hidden">VALOR</th>
+            <th class="col-blocked text-center">ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($configuracion as $item):?>
+        <tr>
+            <td><?php echo $item->campo ?></td>
+            <td><?php echo $item->valor ?></td>
+            <td class="text-right"><?php echo Html::link("admin/configuracion_editar/$item->id","<i class='fa fa-edit'></i>",array('class'=>'btn btn-sm btn-success')) ?></td>
+        </tr>  
+    <?php endforeach; ?>
+    </tbody>
+</table>

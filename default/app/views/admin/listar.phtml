@@ -1,0 +1,31 @@
+<?php View::content() ?>
+<ol class="breadcrumb">
+  <li><?php echo Html::link('admin/',"Inicio") ?></li>
+  <li><?php echo Html::link('admin/listar',"Listar Tweets") ?></li>
+  <li><?php echo Html::link('admin/agregar',"Agregar Tweet") ?></li>
+  <li><?php echo Html::link('admin/configuracion',"Configuración") ?></li>
+</ol>
+
+
+<table class="table table-hover table-condensed table-responsive">
+    <thead>
+        <tr>
+            <th class="col-blocked">#</th>                                        
+            <th class="col-hidden">TWEETS</th>
+            <th class="col-hidden">TAGS</th>
+            <th class="col-hidden">ESTADO</th>
+            <th class="col-blocked text-center">ACCIONES</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($tweets as $item): ?>
+        <tr>
+            <td><?php echo $item->id ?></td>
+            <td><?php echo $item->cuerpo ?></td>
+            <td><?php echo $item->tags ?></td>
+            <td><?php  if($item->estado == 1) { ?><span class="label label-success">Activo</span><?php } else { ?><span class="label label-danger">down</span><?php }?></td>
+            <td class="text-right"><?php echo Html::link("admin/editar/$item->id","<i class='fa fa-2x fa-edit'></i>",array('class'=>'btn btn-sm btn-success')) ?></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+<?php //View::flash(); ?>
+
+<ol class="breadcrumb">
+  <li><?php echo Html::link('admin/',"Inicio") ?></li>
+  <li><?php echo Html::link('admin/listar',"Listar Tweets") ?></li>
+  <li><?php echo Html::link('admin/agregar',"Agregar Tweet") ?></li>
+  <li><?php echo Html::link('admin/configuracion',"Configuración") ?></li>
+</ol>
+
+<?php echo Form::open()?>
+
+  <div class="form-group">
+    <label><h4>Tweet <small>140 caracteres</small></h4></label>
+    <?php echo Form::textarea('tweet.cuerpo',array('class'=>'form-control','rows'=>'3','maxlength'=>'140')) ?>
+  </div>
+
+  <div class="form-group">
+    <label><h4>Tags <small>Opcional</small></h4></label>
+    <?php echo Form::text('tweet.tags',array('class'=>'form-control')) ?>
+  </div>
+
+  <div class="form-group">
+    <label><h4>URL <small>Opcional</small></h4</label>
+    <?php echo Form::text('tweet.url',array('class'=>'form-control')) ?>
+  </div>
+
+<?php echo Form::submit('Agregar', array('class'=>'btn btn-primary btn-lg btn-block')) ?>
+
+<?php echo Form::close()?>

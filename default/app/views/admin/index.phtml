@@ -1,0 +1,23 @@
+
+<div><h1>Hola Administrador</h1></div>
+
+<ol class="breadcrumb">
+  <li><?php echo Html::link('admin/',"Inicio") ?></li>
+  <li><?php echo Html::link('admin/listar',"Listar Tweets") ?></li>
+  <li><?php echo Html::link('admin/agregar',"Agregar Tweet") ?></li>
+  <li><?php echo Html::link('admin/configuracion',"Configuración") ?></li>
+</ol>
+
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3"><?php echo Html::link('admin/listar', '<i class="fa fa-twitter fa-5x"></i>', array('class'=>'js-link js-url'));  ?></i></div>
+                    <div class="col-xs-9 text-right"><h3 class="panel-title">Tweets</h3><h1 style="margin: 0px;"><?php echo $count_tweets ?></h1> </div>                            
+                </div>
+            </div>
+        </div>       
+    </div>
+</div>
