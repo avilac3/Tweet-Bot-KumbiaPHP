@@ -2,18 +2,20 @@
 <html lang="es">
  <head>
   <meta charset=<?= APP_CHARSET ?> >
-  <title>KumbiaPHP Framework</title>
+  <title><?php echo $title?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php Tag::css('kumbia') ?>
+  <?php Tag::css('bootstrap.min') ?>
+  <?php Tag::css('style') ?>
+  <?php Tag::css('font-awesome.min') ?>
   <?= Html::includeCss() ?>
 </head>
 <body>
 <div class="container">
   <header class="row">
-      <div class="col-8">
+      <div class="col-md-8">
         <?= Html::img('kumbiaphp.svg', 'KumbiaPHP logo') ?>
       </div>
-      <div class="col-4 text-right">
+      <div class="col-md-4 text-right">
           App: <strong><?= basename(dirname(APP_PATH)) ?></strong> (<?= PRODUCTION ? 'Production' : 'Development' ?>)
       </div>
   </header>
@@ -21,4 +23,7 @@
   <?php View::partial('kumbia/footer') ?>
 </div>
 </body>
+  <?php echo Tag::js('jquery-1.12.4.min') ?>
+  <?php echo Tag::js('bootstrap') ?>
+
 </html>
